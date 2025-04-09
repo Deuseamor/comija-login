@@ -1,83 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Comijá</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comijá - Entrar ou Cadastrar</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      background: #fff5f5;
+      text-align: center;
+      padding: 50px;
     }
-
-    .logo {
+    h1 {
       font-size: 48px;
-      font-weight: bold;
-      color: #e60014;
-      margin-bottom: 20px;
+      color: #d60000;
     }
-
-    .emoji-face {
-      font-size: 48px;
-      vertical-align: middle;
+    .carinha {
+      display: inline-block;
+      transform: rotate(90deg);
     }
-
-    .login-box {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 40px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-      width: 90%;
-      max-width: 350px;
+    .form-box {
+      display: none;
+      margin-top: 20px;
     }
-
-    .login-box input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .form-box input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+      max-width: 300px;
     }
-
-    .login-box button {
-      width: 100%;
-      padding: 12px;
-      background-color: #e60014;
-      border: none;
+    .form-box button {
+      background-color: #d60000;
       color: white;
-      font-weight: bold;
-      font-size: 16px;
-      border-radius: 6px;
+      padding: 10px 30px;
+      border: none;
       cursor: pointer;
+      margin-top: 10px;
     }
-
-    .login-box button:hover {
-      background-color: #cc0012;
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 12px;
-      color: #999;
+    .btn-group button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #d60000;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="logo">C<span class="emoji-face">😊</span>mijá</div>
-  <div class="login-box">
-    <input type="text" placeholder="E-mail ou telefone" />
-    <input type="password" placeholder="Senha" />
+  <h1>Comi<span class="carinha">:)</span>á</h1>
+  <p>Seu app de comida com retirada e entrega rápida.</p>
+
+  <div class="btn-group">
+    <button onclick="mostrar('login')">Entrar</button>
+    <button onclick="mostrar('cadastro')">Cadastrar-se</button>
+    <button onclick="mostrar('esqueci')">Esqueci a senha</button>
+  </div>
+
+  <div id="login" class="form-box">
+    <h2>Entrar</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
     <button>Entrar</button>
   </div>
-  <div class="footer">
-    © 2025 Comijá. Todos os direitos reservados.
+
+  <div id="cadastro" class="form-box">
+    <h2>Cadastrar-se</h2>
+    <input type="text" placeholder="Nome completo">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Criar senha">
+    <button>Cadastrar</button>
   </div>
+
+  <div id="esqueci" class="form-box">
+    <h2>Recuperar Senha</h2>
+    <input type="email" placeholder="Email">
+    <button>Enviar link de recuperação</button>
+  </div>
+
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll('.form-box').forEach(box => box.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
