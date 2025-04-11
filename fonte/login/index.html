@@ -10,13 +10,16 @@
     <div class="login-container">
         <h1>Bem-vindo ao ComiJá</h1>
         <form id="login-form">
-            <label for="telefone">Número de telefone:</label>
-            <input type="tel" id="telefone" required placeholder="Digite seu número">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required placeholder="Digite seu e-mail">
+            <span class="error-message" id="erro-email"></span>
 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" required placeholder="Digite sua senha">
+            <span class="error-message" id="erro-senha"></span>
 
             <button type="submit">Entrar</button>
+            <div id="loading" style="display: none;">Verificando login...</div>
         </form>
         <p>Não tem uma conta? <a href="../cadastro/index.html">Cadastre-se aqui</a></p>
     </div>
