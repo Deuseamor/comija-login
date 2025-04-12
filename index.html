@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodApp - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="location-selector">
+            <span>Entregar em: </span>
+            <strong>Minha Casa</strong>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Busque por item ou loja">
+        </div>
+    </header>
+
+    <main>
+        <section class="categories">
+            <h2>Categorias</h2>
+            <div class="category-scroll">
+                <div class="category-item" style="background-color: var(--healthy)">
+                    <img src="images/salad.png" alt="Saudável">
+                    <span>Saudável</span>
+                </div>
+                <!-- Adicione mais categorias -->
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <h2>Lojas próximas</h2>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <img src="images/restaurant1.jpg" alt="Restaurante">
+                    <h3>Nome do Restaurante</h3>
+                    <div class="restaurant-info">
+                        <span class="rating">4.5 ★</span>
+                        <span>•</span>
+                        <span>30-40 min</span>
+                    </div>
+                </div>
+                <!-- Adicione mais restaurantes -->
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="search.html">Busca</a>
+        <a href="orders.html">Pedidos</a>
+        <a href="profile.html">Perfil</a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
