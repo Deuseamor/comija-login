@@ -1,0 +1,34 @@
+:root {
+  --vermelho: #EA1D2C;
+  --branco: #FFFFFF;
+  --preto: #333333;
+  --cinza: #F5F5F5;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.btn-primary {
+  background: var(--vermelho);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.search-bar {
+  background: var(--branco);
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.category {
+  background: var(--branco);
+  border-radius: 20px;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
