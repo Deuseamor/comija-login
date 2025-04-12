@@ -1,0 +1,202 @@
+:root {
+    --primary: #EA1D2C;
+    --primary-dark: #C2121F;
+    --text-dark: #3F3F3F;
+    --text-medium: #717171;
+    --bg-light: #F5F5F5;
+    --border-light: #E5E5E5;
+    --healthy: #2ECC71;
+    --snacks: #F1C40F;
+    --pizza: #E67E22;
+    --seafood: #3498DB;
+    --desserts: #9B59B6;
+    --success: #27AE60;
+    --info: #2980B9;
+    --warning: #F39C12;
+    --error: #E74C3C;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px;
+}
+
+.location-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.categories, .restaurants {
+    padding: 15px;
+}
+
+.category-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.category-item {
+    min-width: 80px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+.category-item img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.restaurant-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.restaurant-card h3 {
+    margin: 8px 10px;
+    font-size: 16px;
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 10px;
+    font-size: 14px;
+    color: var(--text-medium);
+}
+
+.restaurant-info span {
+    margin: 0 3px;
+}
+
+.rating {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: var(--text-medium);
+}
+
+.bottom-nav a.active {
+    color: var(--primary);
+}
+
+/* Estilos para autenticação */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-light);
+}
+
+.auth-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.auth-box form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.auth-box form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-box form button:hover {
+    background-color: var(--primary-dark);
+}
+
+.social-login {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.auth-box p {
+    text-align: center;
+    margin: 15px 0;
+    color: var(--text-medium);
+}
+
+.auth-box a {
+    color: var(--primary);
+    text-decoration: none;
+}
